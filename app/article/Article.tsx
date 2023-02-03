@@ -1,5 +1,6 @@
 import React from 'react'
 import { Article } from '../../types/Category';
+import ReadMoreBTN from '../ReadMoreBtn/ReadMoreBTN';
 
 type Props = {
     article: Article;
@@ -31,7 +32,7 @@ export default function ArticleSection(props: Props) {
                         <p>{article.published_at}</p>
                     </footer>
                 </div>
-
+            <ReadMoreBTN article={article}/>
             </div>
         </article>
     )

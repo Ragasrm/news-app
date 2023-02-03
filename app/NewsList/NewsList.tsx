@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewsResponse } from '../../types/Category'
-import ArticleSection from '../Article/Article'
+import ArticleSection from '../article/Article'
 
 type Props = {
     news:NewsResponse
