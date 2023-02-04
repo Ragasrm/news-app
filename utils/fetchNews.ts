@@ -17,8 +17,8 @@ const fetchNews = async(
             {
                 myQuery(
                     access_key: $access_key,
-                    # categories: $categories,
-                    countries: "gb"
+                    #categories: $categories,
+                    countries: "us"
                     # keyword: $keyword
                     ) {
                     data {
@@ -56,22 +56,15 @@ const res = await fetch('https://enid.stepzen.net/api/rafting-tortoise/__graphql
         query,
         variables: {
             access_key: process.env.MEDIASTACK_API_KEY,
-            categories: category,
+            categories: "Business",
             keywords: keywords
         }
     })
 });
 
-console.log(
-    "LOADING",
-    category,
-    keywords
-);
+
 
 const newsResponse = await res.json();
-// console.log("*************", newsResponse)
-// console.log("*************", newsResponse.data)
-// console.log("*************", newsResponse.data?.myQuery)
     // sort by img vs not img present
     const news = sortNewsByImage(newsResponse?.data?.myQuery)
 

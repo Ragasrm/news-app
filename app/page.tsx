@@ -8,8 +8,7 @@ import { response} from "../response"
 async function Homepage() {
 
   // fetch news data
-  const news: NewsResponse = response
-  // await fetchNews(categories.join(","))
+  const news: NewsResponse = await fetchNews(categories.join(","))
 
  
   return (
